@@ -78,7 +78,7 @@ def guess_number():
                 return
 
         print("You are out of guesses. Better luck next time!")
-        response = int(input("Want to try again?\n 1. Retry\t 2. Quit\n"))
+        response = int(input("Want to try again?\n 1. Retry\t 2. Quit\n "))
         x = validate_input(response)
 
         if response == 1:
