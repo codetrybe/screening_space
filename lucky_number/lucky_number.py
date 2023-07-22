@@ -60,7 +60,7 @@ def guess_number():
                 print("Invalid input. select number 1 - 50 for 'Easy level'")
                 continue
             if difficulty_level > 1 and guess not in range(1, 100):
-                print("Invalid input. select number 1 - 50 for 'Easy level'")
+                print("Invalid input. select number 1 - 100")
                 continue
 
             if guess > rand_num:
