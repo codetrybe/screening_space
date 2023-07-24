@@ -10,15 +10,19 @@ const todoList = document.getElementById('todo_list');
 //Event Listeners
 //Example tasks
 
+//function to create a task 
 const addTask = () => {
-    const taskText = todoInput.nodeValue.trim();
+    const taskText = todoInput.value.trim();
 
     if (taskText !== '')
     {
         const taskItem = createTaskItem(taskText);
+        todoList.appendChild(taskItem);
+        todoInput.value = '';
+        //resets the input value after adding adding it to the list item
     }
 }
-
+// 
 const createTaskItem = (taskText) => {
     const taskItem = document.createElement('li');
     taskItem.className = "todo-item";
@@ -32,12 +36,37 @@ const createTaskItem = (taskText) => {
 
     const deleteBtn = document.createElement('button');
     deleteBtn.textContent = 'Delete';
-    document.classList.add('delete-btn');
+    deleteBtn.classList.add('delete-btn');
     deleteBtn.addEventListener('click', deleteTask);
 
     taskItem.appendChild(checkbox)
     taskItem.appendChild(taskTextSpan)
-    taskItem.appendChild()
+    taskItem.appendChild(deleteBtn)
 
-    return
-}
+    return taskItem;
+};
+
+const deleteTask = (event) => {
+    const taskItem = event.target.parentNode;
+    todoList.removeChild(taskItem);
+};
+
+const toggleTask = (event) => {
+    const taskItem = event.target.parentNode;
+    taskItem.classList.toggle('completed');
+};
+
+addTaskButton.addEventListener('click', addTask);
+todoInput.addEventListener('keydown', function (event) {
+    if(event.key === 'Enter'){
+        addTask();
+    }
+});
+
+//initial tasks
+const initialTasks = ['Finish Resume', 'Write Cover letter', 'Optimize Linkedin'];
+
+initialTasks.forEach((task) => {
+    const taskItem = createTaskItem(task);
+    todoList.appendChild(taskItem);
+});
