@@ -6,6 +6,9 @@
 #include <stdlib.h>
 #include <sys/types.h>
 #include <sys/wait.h>
+#include <ctype.h>
+#include <string.h>
 
 void prompt(void);
+void decimalToBinary(int decimal);
 #endif
