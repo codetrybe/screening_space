@@ -6,10 +6,11 @@ converter calculator done with `C` programming Language
 ---
 > The number base converters codes are as followed
 
-| Base |
-| ---- |
-|Decimal|
-|Binary|
+| Base | Numeric Notation |
+| ---- | --|
+|Decimal| 10 |
+|Binary| 2 |
+|Octal | 8 |
 
 ---
 
