@@ -13,4 +13,4 @@ converter calculator done with `C` programming Language
 
 ---
 
-####### Constructive criticism is highly appreciated
+##### Constructive criticism is highly appreciated
