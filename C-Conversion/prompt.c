@@ -54,9 +54,9 @@ unsigned long int binaryToDecimal(const char *binary)
 		if (binary == NULL)
 		return (0);
 
-	for (i = 0; binary[i] != '\0'; binary++)
+	for (i = 0; binary[i] != '\0'; i++)
 	{
-		if ((binary[i] < 0) || (binary[i] > 1))
+		if ((binary[i] < '0') || (binary[i] > '1'))
 			return (0);
 
 		result = 2 * result + (binary[i] - '0');

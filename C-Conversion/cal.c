@@ -36,7 +36,7 @@ int main(void)
 		}
 	}
 
-	if (strcmp(mode_1, "binary") == 0)
+	else if (strcmp(mode_1, "binary") == 0)
 	{
 		printf("Enter binary number: ");
 		check = scanf("%ms", &binary);
@@ -53,8 +53,8 @@ int main(void)
 			printf("Enter a valid binary digit > -1\n");
 		}
 	}
-
+	else
+		printf("Enter a valid mode\n");
 
 	return (0);
 }
-
