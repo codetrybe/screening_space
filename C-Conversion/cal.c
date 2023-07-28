@@ -6,7 +6,8 @@ int main(void)
 	char mode_2[10];
 	int decimal = 0;
 	int check = 0;
-	int binary = 0;
+	char *binary = NULL;
+	unsigned long int result;
 
 	prompt();
 
@@ -38,18 +39,18 @@ int main(void)
 	if (strcmp(mode_1, "binary") == 0)
 	{
 		printf("Enter binary number: ");
-		check = scanf("%i", &binary);
+		check = scanf("%ms", &binary);
 
-		if (check == 1)
+		if (binary)
 		{
-			if (decimal > -1)
-			{
-				decimalToBinary(decimal);
-			}
+			result = binaryToDecimal(binary);
+
+			printf("%s to decimal is %lu\n", binary, result);
+			free(binary);
 		}
 		else
 		{
-			printf("Enter a valid digit > -1\n");
+			printf("Enter a valid binary digit > -1\n");
 		}
 	}
 

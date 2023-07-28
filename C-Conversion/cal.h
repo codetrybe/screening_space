@@ -11,4 +11,6 @@
 
 void prompt(void);
 void decimalToBinary(int decimal);
+unsigned long int binaryToDecimal(const char *binary);
+
 #endif

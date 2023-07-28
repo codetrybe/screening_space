@@ -46,3 +46,22 @@ void decimalToBinary(int decimal)
 	printf("\n");
 }
 
+unsigned long int binaryToDecimal(const char *binary)
+{
+	unsigned long int result = 0;
+	int i = 0;
+
+		if (binary == NULL)
+		return (0);
+
+	for (i = 0; binary[i] != '\0'; binary++)
+	{
+		if ((binary[i] < 0) || (binary[i] > 1))
+			return (0);
+
+		result = 2 * result + (binary[i] - '0');
+
+	}
+
+	return (result);
+}
