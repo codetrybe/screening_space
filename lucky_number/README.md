@@ -16,11 +16,11 @@ Welcome to the Number Guessing Game! This is a simple text-based game where you 
 
 4. You will be prompted to select the difficulty level:
 
-    - 1. Easy:** You will have 10 attempts to guess a number between 1 and 50.
-    - 2. Normal:** You will have 8 attempts to guess a number between 1 and 100.
-    - 3. Hard:** You will have 6 attempts to guess a number between 1 and 100.
-    - 4. Advance:** You will have 4 attempts to guess a number between 1 and 100.
-    - 5. Quit:** Exit the game.
+    - **1. Easy:** You will have 10 attempts to guess a number between 1 and 50.
+    - **2. Normal:** You will have 8 attempts to guess a number between 1 and 100.
+    - **3. Hard:** You will have 6 attempts to guess a number between 1 and 100.
+    - **4. Advance:** You will have 4 attempts to guess a number between 1 and 100.
+    - **5. Quit:** Exit the game.
 
 5. Once you choose a difficulty level, you will be given a limited number of attempts to guess the lucky number.
 
